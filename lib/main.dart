@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:track_covid19/util/loadhandler.dart';
 import 'package:track_covid19/widgets/countrypicker.dart';
 import 'package:track_covid19/widgets/countryscreen.dart';
+import 'package:track_covid19/widgets/timelinescreen.dart';
 
 import 'widgets/header.dart';
 import 'widgets/aboutscreen.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         "/about": (BuildContext context) => AboutScreen(),
         "/country": (BuildContext context) => CountryScreen(),
+        "/timeline": (BuildContext context) => TimelineScreen()
       },
     );
   }

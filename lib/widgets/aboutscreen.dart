@@ -9,6 +9,13 @@ class AboutScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(title: Text("About")),
         body: ListView(children: <Widget>[
+          Container(
+              color: Colors.lightBlue,
+              child: ListTile(
+                  leading: Icon(Icons.home),
+                  title: Text('Stay Home'),
+                  subtitle: Text(
+                      'Remember to stay home to stop the spread and #FlattenTheCurve'))),
           ListTile(
               leading: Icon(Icons.person),
               title: Text('Created by'),
@@ -24,6 +31,22 @@ class AboutScreen extends StatelessWidget {
               title: Text('Data from'),
               subtitle: Text('COVID-19 API'),
               onTap: () => _launchURL("https://covid19api.com/")),
+          ListTile(
+              leading: Icon(Icons.list),
+              title: Text(
+                  'Centers For Disease Control and Prevention (CDC) Resources'),
+              subtitle: Text('cdc.gov'),
+              onTap: () => _launchURL("https://cdc.gov/covid19")),
+          ListTile(
+              leading: Icon(Icons.gavel),
+              title: Text('Federal Government COVID-19 Resources'),
+              subtitle: Text('coronavirus.gov'),
+              onTap: () => _launchURL("https://cornavirus.gov")),
+          ListTile(
+              leading: Icon(Icons.help_outline),
+              title: Text('Symptom Checker'),
+              subtitle: Text('From Apple'),
+              onTap: () => _launchURL("https://www.apple.com/covid19")),
           ListTile(
               leading: Icon(Icons.developer_mode),
               title: Text('This app is open source.'),

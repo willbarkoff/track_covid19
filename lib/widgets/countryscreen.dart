@@ -15,7 +15,16 @@ class CountryScreen extends StatelessWidget {
     final Map<String, dynamic> country =
         ModalRoute.of(context).settings.arguments;
     return Scaffold(
-        appBar: AppBar(title: Text(country["Country"])),
+        appBar: AppBar(
+          title: Text(country["Country"]),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.timeline),
+              onPressed: () => Navigator.of(context)
+                  .pushNamed("/timeline", arguments: country),
+            )
+          ],
+        ),
         body: FutureBuilder(
             future: http.get(
                 "https://api.covid19api.com/total/country/" + country["Slug"]),
